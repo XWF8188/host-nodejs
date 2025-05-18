@@ -21,13 +21,13 @@ const NEZHA_SERVER = process.env.NEZHA_SERVER || '';
 const NEZHA_PORT = process.env.NEZHA_PORT || '';
 const NEZHA_KEY = process.env.NEZHA_KEY || '';
 const NAME = process.env.NAME || os.hostname();
-console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-console.log("甬哥Github项目  ：github.com/yonggekkk");
-console.log("甬哥Blogger博客 ：ygkkk.blogspot.com");
-console.log("甬哥YouTube频道 ：www.youtube.com/@ygkkk");
-console.log("Nodejs真一键无交互Vless代理脚本");
-console.log("当前版本：25.5.13 测试beta2版");
-console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+console。log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+console。log("甬哥Github项目  ：github.com/yonggekkk");
+console。log("甬哥Blogger博客 ：ygkkk.blogspot.com");
+console。log("甬哥YouTube频道 ：www.youtube.com/@ygkkk");
+console。log("Nodejs真一键无交互Vless代理脚本");
+console。log("当前版本：25.5.13 测试beta2版");
+console。log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 async function getVariableValue(variableName, defaultValue) {
     const envValue = process.env[variableName];
     if (envValue) {
@@ -50,13 +50,13 @@ function ask(question) {
     return new Promise(resolve => rl.question(question, ans => { rl.close(); resolve(ans.trim()); }));
 }
 async function main() {
-    const UUID = await getVariableValue('UUID', '');
+    const UUID = await getVariableValue('UUID', '75bb4e48-dc8c-480f-8d71-3bf6c6d0ac3a');
     console.log('你的UUID:', UUID);
 
-    const PORT = await getVariableValue('PORT', '');
+    const PORT = await getVariableValue('PORT', '55129');
     console.log('你的端口:', PORT);
 
-    const DOMAIN = await getVariableValue('DOMAIN', '');
+    const DOMAIN = await getVariableValue('DOMAIN', 'host.weibreeze.dpdns.org');
     console.log('你的域名:', DOMAIN);
 
     const httpServer = http.createServer((req, res) => {
