@@ -50,13 +50,13 @@ function ask(question) {
     return new Promise(resolve => rl.question(question, ans => { rl.close(); resolve(ans.trim()); }));
 }
 async function main() {
-    const UUID = await getVariableValue('UUID', '75bb4e48-dc8c-480f-8d71-3bf6c6d0ac3a');
+    const UUID = await getVariableValue('UUID', '342e6926-4a93-4a4d-9265-24435d836b41');
     console.log('你的UUID:', UUID);
 
-    const PORT = await getVariableValue('PORT', '55129');
+    const PORT = await getVariableValue('PORT', '25258');
     console.log('你的端口:', PORT);
 
-    const DOMAIN = await getVariableValue('DOMAIN', 'host.weibreeze.dpdns.org');
+    const DOMAIN = await getVariableValue('DOMAIN', 'host.weibreeze.us.kg');
     console.log('你的域名:', DOMAIN);
 
     const httpServer = http.createServer((req, res) => {
